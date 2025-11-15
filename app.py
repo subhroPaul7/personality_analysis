@@ -16,7 +16,7 @@ with col2:  # Place image in the center column
     st.image("Spark_Logo.png", width=200)
 
 os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
-llm = ChatGroq(model='llama3-70b-8192')
+llm = ChatGroq(model='llama-3.3-70b-versatile')
 # Define choices for radio button inputs
 personality_options = ["Shy & Thoughtful", "Outgoing & Social", "Balanced", "Risk-Taker"]
 learning_style_options = ["Visual Learner", "Hands-On Learner", "Listener", "Book Lover"]
