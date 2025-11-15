@@ -49,7 +49,7 @@ def career_options(metrics, first):
     Suggest 3 career options that best fit the student's strengths.
     Provide a reason for each career choice based on the given metrics.
     Output in a JSON with each career option as a key and the reason as value."""+"\n\n{ins}")
-    llm = ChatGroq(model="llama3-70b-8192")
+    llm = ChatGroq(model="llama-3.3-70b-versatile")
     chain = prompt | llm | parser
     result = chain.invoke({"ins":parser.get_format_instructions()}).options
     return result
